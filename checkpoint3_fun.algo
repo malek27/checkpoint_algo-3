@@ -1,0 +1,33 @@
+FUNCTION write_dot_function( v1,v2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i,n : INTEGER
+BEGIN
+    FOR i FROM 0 TO v1.length-1 STEP step  DO              
+            n= v1[i]*v2[i]
+            n = n+ v1[i]*v2[i]
+    END_FOR
+    RETURN n ;
+END
+
+PROCEDURE ps (n : INTEGER)
+VAR
+    ps : INTEGER
+BEGIN
+    IF (n == 0) THEN
+        write ("ps is orthogonal")
+
+        ELSE
+        
+        write ("ps is ",n)
+    END_IF
+END
+
+ALGORITHM checkpoint_algo3
+VAR
+    v1 , v2 : ARRAY_OF INTEGER [50] ;
+    n  : INTEGER
+BEGIN
+    n := write_dot_function(v1,v2)
+
+    ps(n) 
+END

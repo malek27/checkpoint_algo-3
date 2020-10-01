@@ -1,0 +1,37 @@
+PROCEDURE write_dot_procedure(v1,v2 :ARRAY_OF INTEGER; VAR ps : INTEGER)
+VAR
+    i : INTEGER
+BEGIN
+    
+    FOR i FROM 0 TO v1.length-1 STEP step  DO
+         
+        ps = ps + (v1[i]*v2[j])
+            
+    END_FOR
+    
+END
+
+PROCEDURE write_result( ps: INTEGER)
+VAR
+
+BEGIN
+    IF (ps == 0) THEN
+        write ("ps is orthogonal")
+                
+        ELSE
+                
+        write ("ps is ",n) 
+    END_IF 
+END
+
+ALGORITHM checkpoint_algo3
+VAR
+    v1 , v2 : ARRAY_OF INTEGER [50] ;
+    ps : INTEGER
+BEGIN
+    
+    write_dot_procedure (v1,v2, ps) 
+
+    write_result (ps)
+
+END
